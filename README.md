@@ -6,7 +6,6 @@ An API that performs all the features of a todo app
 ## Features
 
 - Register and login a User
-- Create multiple todos
 - Create a todo
 - list all todos 
 - Update a todo
