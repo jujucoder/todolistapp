@@ -84,13 +84,26 @@ WSGI_APPLICATION = 'todolistapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd4dfqqo568msa3',
+        'USER': 'ofmdzvujbjcpfq',
+        'PASSWORD': 'afdf051f5aea7ab81a66ed55830e9966a10f0d57305465b9a0bf9bae6e774fbd',
+        'HOST': 'ec2-44-205-64-253.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
-
+import dj_database_url
+database_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(database_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
