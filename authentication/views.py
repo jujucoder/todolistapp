@@ -8,7 +8,7 @@ from authentication import serializers
 # Create your views here.
 
 class AuthUserApiView(GenericAPIView):
-
+    serializer_class = RegisterSerializer
     permission_classes=(permissions.IsAuthenticated,)
     def get(self,request):
         user=request.user
