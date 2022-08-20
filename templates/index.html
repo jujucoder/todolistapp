@@ -1,0 +1,53 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Todo List API</title>
+</head>
+<body>
+    <main>
+    <div>
+        <div >
+            <h1>Todo List API</h1>
+                <p>
+                    An API that performs all the features of a todo app
+                </p>
+
+                <p>
+                    Built on the Django and uses the Django Rest Framework.
+                </p>
+
+                <h2>Features</h2>
+
+                <ul>
+                    <li> Registerand login a User</li>
+                    <li> Create multiple todos</li>
+                    <li> Create a todo</li>
+                    <li>list all todos</li>  
+                    <li>Update a todo</li>
+                    <li>Delete a todo</li>
+                    <li>Filter,search and order todos</li>
+                </ul>
+
+        </div>
+
+        <div>
+        
+            <ul>
+                <li><a target="_blank" href="{% url 'schema-redoc' %}">View Documentation on ReDoc</a></li>
+                <li><a href="{% url 'schema-swagger-ui' %}">View Documentation on SwaggerUI</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <p >
+        <h3>contact the developer:</h3><a target="_blank" href="https://github.com/jayjaytenctacion">Okputu Julius</a>
+        <br><a href="mailto:juliusstan10@gmail.com">juliusstan10@gmail.com</a>
+    </p>
+</main>
+</body>
+</html>
